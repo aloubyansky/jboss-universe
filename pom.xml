@@ -27,7 +27,7 @@
     <version>26</version>
   </parent>
 
-  <groupId>org.jboss.galleon.universe</groupId>
+  <groupId>org.jboss.universe</groupId>
   <artifactId>jboss-universe-parent</artifactId>
   <version>1.0.0.Final</version>
   <packaging>pom</packaging>

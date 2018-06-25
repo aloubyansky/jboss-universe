@@ -22,7 +22,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.jboss.galleon.universe</groupId>
+    <groupId>org.jboss.universe</groupId>
     <artifactId>jboss-universe-parent</artifactId>
     <version>1.0.0.Final</version>
   </parent>
@@ -54,7 +54,7 @@
             <phase>prepare-package</phase>
             <configuration>
               <name>wildfly-servlet</name>
-              <groupId>org.jboss.galleon.universe</groupId>
+              <groupId>org.jboss.universe</groupId>
               <artifactId>wildfly-servlet-producer</artifactId>
               <version>1.0.0.Final</version>
               <feature-pack-groupId>org.wildfly</feature-pack-groupId>
