@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2018 Red Hat, Inc. and/or its affiliates
+    Copyright 2016-2018 Red Hat, Inc. and/or its affiliates
     and other contributors as indicated by the @author tags.
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,20 +27,12 @@
     <version>1.0.0.Final</version>
   </parent>
 
-  <artifactId>jboss-universe</artifactId>
+  <artifactId>wildfly-servlet-producer</artifactId>
   <packaging>pom</packaging>
 
-  <name>JBoss Universe</name>
+  <name>WildFly Servlet Producer</name>
 
   <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>wildfly-core-producer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>wildfly-servlet-producer</artifactId>
-    </dependency>
     <dependency>
       <groupId>org.jboss.galleon</groupId>
       <artifactId>galleon-maven-plugins</artifactId>
@@ -55,35 +47,29 @@
         <version>2.0.0.Alpha1-SNAPSHOT</version>
         <executions>
           <execution>
-            <id>create-universe</id>
+            <id>create-wildfly-servlet-producer</id>
             <goals>
-              <goal>create-universe</goal>
+              <goal>create-producer</goal>
             </goals>
             <phase>prepare-package</phase>
             <configuration>
+              <name>wildfly-servlet</name>
               <groupId>org.jboss.galleon.universe</groupId>
-              <artifactId>jboss-universe</artifactId>
+              <artifactId>wildfly-servlet-producer</artifactId>
               <version>1.0.0.Final</version>
-              <producers>
-                <producer>
-                  <name>wildfly-core</name>
-                  <groupId>org.jboss.galleon.universe</groupId>
-                  <artifactId>wildfly-core-producer</artifactId>
-                  <version-range>[1.0-alpha,2.0-alpha)</version-range>
-                </producer>
-                <producer>
-                  <name>wildfly-servlet</name>
-                  <groupId>org.jboss.galleon.universe</groupId>
-                  <artifactId>wildfly-servlet-producer</artifactId>
-                  <version-range>[1.0-alpha,2.0-alpha)</version-range>
-                </producer>
-                <producer>
-                  <name>wildfly</name>
-                  <groupId>org.jboss.galleon.universe</groupId>
-                  <artifactId>wildfly-producer</artifactId>
-                  <version-range>[1.0-alpha,2.0-alpha)</version-range>
-                </producer>
-              </producers>
+              <feature-pack-groupId>org.wildfly</feature-pack-groupId>
+              <feature-pack-artifactId>wildfly-servlet-galleon-pack</feature-pack-artifactId>
+              <frequencies>
+                <frequency>alpha</frequency>
+                <frequency>beta</frequency>
+                <frequency>snapshot</frequency>
+              </frequencies>
+              <channels>
+                <channel>
+                  <name>14</name>
+                  <version-range>[14.0-beta,15.0-alpha)</version-range>
+                </channel>
+              </channels>
             </configuration>
           </execution>
         </executions>

@@ -44,6 +44,8 @@
 
   <modules>
     <module>wildfly-core-producer</module>
+    <module>wildfly-servlet-producer</module>
+    <module>wildfly-producer</module>
     <module>jboss-universe</module>
   </modules>
 
@@ -103,6 +105,32 @@
       <!-- Modules in this project -->
 
       <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>jboss-universe</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>wildfly-core-producer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>wildfly-servlet-producer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>wildfly-producer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <!-- External Dependencies -->
+
+      <dependency>
         <groupId>org.jboss.galleon</groupId>
         <artifactId>galleon-core</artifactId>
         <version>${version.org.jboss.galleon}</version>
@@ -119,8 +147,6 @@
         <artifactId>galleon-maven-universe</artifactId>
         <version>${version.org.jboss.galleon}</version>
       </dependency>
-
-      <!-- External Dependencies -->
 
       <dependency>
         <groupId>org.apache.maven</groupId>
