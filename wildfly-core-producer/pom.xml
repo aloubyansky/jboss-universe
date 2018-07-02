@@ -66,8 +66,8 @@
               </frequencies>
               <channels>
                 <channel>
-                  <name>6</name>
-                  <version-range>[6.0-alpha,7.0-alpha)</version-range>
+                  <name>current</name>
+                  <version-range>[6.0-alpha,)</version-range>
                 </channel>
               </channels>
             </configuration>

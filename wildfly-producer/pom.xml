@@ -66,8 +66,8 @@
               </frequencies>
               <channels>
                 <channel>
-                  <name>14</name>
-                  <version-range>[14.0-beta,15.0-alpha)</version-range>
+                  <name>current</name>
+                  <version-range>[14.0-beta,)</version-range>
                 </channel>
               </channels>
             </configuration>

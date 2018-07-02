@@ -46,7 +46,7 @@
     <module>wildfly-core-producer</module>
     <module>wildfly-servlet-producer</module>
     <module>wildfly-producer</module>
-    <module>jboss-universe</module>
+    <module>community-universe</module>
   </modules>
 
   <properties>
@@ -106,7 +106,7 @@
 
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>jboss-universe</artifactId>
+        <artifactId>community-universe</artifactId>
         <version>${project.version}</version>
       </dependency>
 
